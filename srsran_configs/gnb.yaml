@@ -1,6 +1,6 @@
 amf:
-  addr: 127.0.0.5               # The address or hostname of the AMF.
-  bind_addr: 127.0.0.1             # A local IP that the gNB binds to for traffic from the AMF.
+  addr: open5gs-amf-ngap             # The address or hostname of the AMF.
+  bind_addr: ${LOCAL_IP}             # A local IP that the gNB binds to for traffic from the AMF.
 
 ru_sdr:
   device_driver: zmq
@@ -37,3 +37,5 @@ pcap:
 e2:
   enable_du_e2: true                # Enable DU E2 agent (one for each DU instance)
   e2sm_kpm_enabled: true            # Enable KPM service module
+  addr: flexric
+  bind_addr: ${LOCAL_IP}
